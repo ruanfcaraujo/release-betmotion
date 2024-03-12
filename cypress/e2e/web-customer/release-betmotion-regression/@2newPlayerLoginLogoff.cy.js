@@ -13,9 +13,8 @@ describe('login and logoff with registered credentials', () => {
         cy.visit('https://bmsite-staging.salsaomni.com/br/', { failOnStatusCode: false })
         cy.get(LOGIN.toEnterButton).click()
         cy.playerLogin({ userName, password })
-        cy.get(LOGIN.playerSuccessfullyAuthenticated).contains(userName)
+        cy.get(LOGIN.playerSuccessfullyAuthenticated).should('be.visible').contains(userName)
         
-
     })
     it('must logoff with registered credentials', () => {
         cy.viewport(1920, 1080)

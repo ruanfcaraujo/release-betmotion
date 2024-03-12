@@ -1,8 +1,7 @@
 import { fakerPT_BR as faker } from '@faker-js/faker'
 import { cpf } from 'cpf-cnpj-validator'
-import { DEPOSIT, DEPOSIT_ADDITIONAL_INFORMATION, LOGIN, LOGOFF, REGISTRATION_FORM } from '../e2e/web-customer/release-betmotion-regression/constants'
+import { DEPOSIT, DEPOSIT_ADDITIONAL_INFORMATION, LOGIN, LOGOFF, REGISTRATION_FORM, BO_LOGIN } from '../e2e/web-customer/release-betmotion-regression/constants'
 import { v4 as uuidv4 } from 'uuid'
-
 
 Cypress.Commands.add('fillFormPlayer', ({ userName, password }) => {
    const random = uuidv4().replace(/\d/g, '')[0]
@@ -41,8 +40,9 @@ Cypress.Commands.add('playerLogin', ({ userName, password }) => {
    cy.clearAllCookies()
    cy.clearAllSessionStorage()
    cy.clearAllLocalStorage()
-   cy.get(LOGIN.loginUsernameField, { timeout: 60000 }).should('be.visible').type(userName)
-   cy.get(LOGIN.loginPasswordField, { timeout: 60000 }).should('be.visible').type(password)
+   cy.get(LOGIN.loginUsernameField).should('be.visible').type(userName)
+   cy.get(LOGIN.loginPasswordField).should('be.visible').type(password)
+   cy.wait(6000)
    cy.get(LOGIN.loginEnterButton).click()
 
 })
@@ -61,11 +61,17 @@ Cypress.Commands.add('depositAdditionalInformation', () => {
    cy.get(DEPOSIT_ADDITIONAL_INFORMATION.acceptCookiesButton).click()
    cy.get(DEPOSIT_ADDITIONAL_INFORMATION.validateCpfNumberButton).scrollIntoView().click()
    cy.get(DEPOSIT_ADDITIONAL_INFORMATION.continueButton).click()
-   //cy.url().should('eq', DEPOSIT.successUrlPixDeposit)
+   cy.get(DEPOSIT_ADDITIONAL_INFORMATION.pixDepositInstructions, { timeout: 30000 } ).should('be.visible')
 
 })
 Cypress.Commands.add('playerLogOff', () => {
    cy.clearAllCookies()
    cy.get(LOGOFF.logOffButton).contains('Sair').click()
+
+})
+Cypress.Commands.add('backOfficeLogin', () => {
+   cy.get(BO_LOGIN.loginUsernameField).type(BO_LOGIN.user)
+   cy.get(BO_LOGIN.loginPasswordField).type(BO_LOGIN.password)
+   cy.get(BO_LOGIN.loginEnterButton).click()
 
 })

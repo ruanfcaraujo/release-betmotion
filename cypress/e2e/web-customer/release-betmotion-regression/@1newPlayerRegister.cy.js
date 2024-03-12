@@ -1,5 +1,4 @@
 /// <reference types="Cypress"/>
-//import { faker } from "@faker-js/faker"
 import { fakerPT_BR as faker } from '@faker-js/faker'
 import { ACCOUNT_CREATED } from './constants'
 

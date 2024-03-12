@@ -9,7 +9,6 @@ export const REGISTRATION_FORM = {
     cellPhoneField: '.phone',
     currencyBrlField: '.ng-invalid > .cb-container > .cb-combobox-container > .cb-combobox',
     createAaccountButton: 'button[type="submit"]',
-
 }
 export const LOGIN = {
     toEnterButton: '.headertop-notauth > app-button > .btn',
@@ -17,16 +16,13 @@ export const LOGIN = {
     loginUsernameField: '#username',
     loginPasswordField: '#password',
     loginEnterButton: '.w-100 > .btn > span'
-
 }
 export const LOGOFF = {
-    logOffButton: 'a.headertop-auth-usermenu-item'
-    
+    logOffButton: 'a.headertop-auth-usermenu-item'  
 }
 export const ACCOUNT_CREATED = {
     accountCreatedSuccessfully: '.create-account-success',
     msgAccountCreatedSuccessfully: 'h3.text-pink'
-
 }
 export const DEPOSIT = {
     depositOption: 'a[routerlink="/deposit"]',
@@ -37,12 +33,29 @@ export const DEPOSIT = {
     customValueField: '#value',
     depositButton: 'button[title*="Depositar"]',
     successUrlPixDeposit: 'https://bmsite-staging.salsaomni.com/br/deposit/home/BR/PIX/BANK_STEPS/BANK_TRANSFER/PIX/success/ftd-success'
-
 }
 export const DEPOSIT_ADDITIONAL_INFORMATION = {
     modalAdditionalInformation: 'div.text-body2.text-bold.mb-3',
     cpfField: '#documentNumber',
     validateCpfNumberButton: '.offset-xl-2 > app-button > .btn > span',
     acceptCookiesButton: '.mb-2 > .btn > span',
-    continueButton: 'button.btn.pink.btn-block.btn-regular[title="Continuar"]'
+    continueButton: 'button.btn.pink.btn-block.btn-regular[title="Continuar"]',
+    pixDepositInstructions:'div.h3.mb-4:contains("PIX - Siga as Intruções")'
+}
+export const BO_LOGIN = {
+    loginUsernameField: '#j_username',
+    loginPasswordField: '#j_password',
+    loginEnterButton: '#login_button',
+    MenuBotton: '.menu-button-div > .btn',
+    user: 'asdasd',
+    password: 'asdasd'
+}
+export const BO_FINANCES_DROPDOWN = {
+    BofinancesOption: 'a.dropdown-toggle.ng-binding',
+    BodepositOption: 'a[ui-sref="home.deposits"]',
+    userNameField:'input.form-control[ng-model="filters.tempObject.username"]',
+    searchBotton: '.btn > .ng-scope',
+    userNameValidation: 'td[auto="red-text"][condition="isBlocked"]',
+    bankValidation: '[auto="bank"] > .ng-scope',
+    statusValidation: 'td[translate=""].ng-scope',
 }

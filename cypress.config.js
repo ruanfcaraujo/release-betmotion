@@ -1,21 +1,22 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require("cypress")
+const { marge } = require("mochawesome-report-generator")
 
 module.exports = defineConfig({
-
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-
+  // Configurações Cypress aqui...
+  pageLoadTimeout: 90000,
+  // Configuração do relatório
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports', // Diretório onde os relatórios serão salvos
+    overwrite: false, // Não sobrescrever relatórios existentes
+    html: true, // Gerar relatórios HTML
+    json: true // Gerar relatórios JSON
   },
-})
-module.exports = {
-  chromeWebSecurity: false,
+
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-    },
+    }
   }
-  // Outras configurações podem ser adicionadas conforme necessário
-};
+})
 
