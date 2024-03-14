@@ -15,14 +15,14 @@ export const LOGIN = {
     playerSuccessfullyAuthenticated: '.headertop-auth-user-name',
     loginUsernameField: '#username',
     loginPasswordField: '#password',
-    loginEnterButton: '.w-100 > .btn > span'
+    loginEnterButton: '.w-100 > .btn > span',
 }
 export const LOGOFF = {
-    logOffButton: 'a.headertop-auth-usermenu-item'  
+    logOffButton: 'a.headertop-auth-usermenu-item',  
 }
 export const ACCOUNT_CREATED = {
     accountCreatedSuccessfully: '.create-account-success',
-    msgAccountCreatedSuccessfully: 'h3.text-pink'
+    msgAccountCreatedSuccessfully: 'h3.text-pink',
 }
 export const DEPOSIT = {
     depositOption: 'a[routerlink="/deposit"]',
@@ -32,7 +32,7 @@ export const DEPOSIT = {
     pixValueScreen: 'div.h3.mb-4:contains("PIX - Valor")',
     customValueField: '#value',
     depositButton: 'button[title*="Depositar"]',
-    successUrlPixDeposit: 'https://bmsite-staging.salsaomni.com/br/deposit/home/BR/PIX/BANK_STEPS/BANK_TRANSFER/PIX/success/ftd-success'
+    successUrlPixDeposit: 'https://bmsite-staging.salsaomni.com/br/deposit/home/BR/PIX/BANK_STEPS/BANK_TRANSFER/PIX/success/ftd-success',
 }
 export const DEPOSIT_ADDITIONAL_INFORMATION = {
     modalAdditionalInformation: 'div.text-body2.text-bold.mb-3',
@@ -40,7 +40,7 @@ export const DEPOSIT_ADDITIONAL_INFORMATION = {
     validateCpfNumberButton: '.offset-xl-2 > app-button > .btn > span',
     acceptCookiesButton: '.mb-2 > .btn > span',
     continueButton: 'button.btn.pink.btn-block.btn-regular[title="Continuar"]',
-    pixDepositInstructions:'div.h3.mb-4:contains("PIX - Siga as Intruções")'
+    pixDepositInstructions:'div.h3.mb-4:contains("PIX - Siga as Intruções")',
 }
 export const BO_LOGIN = {
     loginUsernameField: '#j_username',
@@ -48,7 +48,7 @@ export const BO_LOGIN = {
     loginEnterButton: '#login_button',
     MenuBotton: '.menu-button-div > .btn',
     user: 'asdasd',
-    password: 'asdasd'
+    password: 'asdasd',
 }
 export const BO_FINANCES_DROPDOWN = {
     BofinancesOption: 'a.dropdown-toggle.ng-binding',
@@ -61,5 +61,10 @@ export const BO_FINANCES_DROPDOWN = {
 }
 export const VERTICALS_MENU = {
     verticalMain: 'a.headertop-menu-item' ,
+    sportsBettingVerticalURL: 'https://bmsite-staging.salsaomni.com/br/aposta-esportiva/cavalo2',
+    slotVerticalUrl:'https://bmsite-staging.salsaomni.com/br/slots-online/teste_jeff_acum',
+    casinoVerticalUrl:'https://bmsite-staging.salsaomni.com/br/cassino-online/betgamestv-tv',
+    bingoVertical: 'https://bmsite-staging.salsaomni.com/br/bingo-online/keno',
+    promotionsVerticalUrl: 'https://bmsite-staging.salsaomni.com/br/promocoes/bonus-de-boas-vindas',
 
 }
