@@ -59,3 +59,7 @@ export const BO_FINANCES_DROPDOWN = {
     bankValidation: '[auto="bank"] > .ng-scope',
     statusValidation: 'td[translate=""].ng-scope',
 }
+export const VERTICALS_MENU = {
+    verticalMain: 'a.headertop-menu-item' ,
+
+}
