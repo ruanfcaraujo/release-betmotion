@@ -40,7 +40,7 @@ export const DEPOSIT_ADDITIONAL_INFORMATION = {
     validateCpfNumberButton: '.offset-xl-2 > app-button > .btn > span',
     acceptCookiesButton: '.mb-2 > .btn > span',
     continueButton: 'button.btn.pink.btn-block.btn-regular[title="Continuar"]',
-    pixDepositInstructions:'div.h3.mb-4:contains("PIX - Siga as Intruções")',
+    pixDepositInstructions:'.d-flex > .h3'
 }
 export const BO_LOGIN = {
     loginUsernameField: '#j_username',
@@ -51,18 +51,18 @@ export const BO_LOGIN = {
     password: 'asdasd',
 }
 export const BO_FINANCES_DROPDOWN = {
-    BofinancesOption: 'a.dropdown-toggle.ng-binding',
-    BodepositOption: 'a[ui-sref="home.deposits"]',
+    boFinancesOption: 'a.dropdown-toggle.ng-binding',
+    boDepositOption: 'a[ui-sref="home.deposits"]',
     userNameField:'input.form-control[ng-model="filters.tempObject.username"]',
     searchBotton: '.btn > .ng-scope',
     userNameValidation: 'td[auto="red-text"][condition="isBlocked"]',
-    bankValidation: '[auto="bank"] > .ng-scope',
+    bankValidation: 'td.ng-scope[ng-click^="openInnerOption',
     statusValidation: 'td[translate=""].ng-scope',
 }
 export const VERTICALS_MENU = {
     verticalMain: 'a.headertop-menu-item' ,
-    sportsBettingVerticalURL: 'https://bmsite-staging.salsaomni.com/br/aposta-esportiva/cavalo2',
-    slotVerticalUrl:'https://bmsite-staging.salsaomni.com/br/slots-online/teste_jeff_acum',
+    sportsBettingVerticalURL: 'https://bmsite-staging.salsaomni.com/br/apostas-esportivas/overview',
+    slotVerticalUrl:'https://bmsite-staging.salsaomni.com/br/slots-online/lobbyjackpotkarina',
     casinoVerticalUrl:'https://bmsite-staging.salsaomni.com/br/cassino-online/betgamestv-tv',
     bingoVertical: 'https://bmsite-staging.salsaomni.com/br/bingo-online/keno',
     promotionsVerticalUrl: 'https://bmsite-staging.salsaomni.com/br/promocoes/bonus-de-boas-vindas',

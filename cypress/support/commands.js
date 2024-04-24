@@ -61,7 +61,7 @@ Cypress.Commands.add('depositAdditionalInformation', () => {
    cy.get(DEPOSIT_ADDITIONAL_INFORMATION.acceptCookiesButton).click()
    cy.get(DEPOSIT_ADDITIONAL_INFORMATION.validateCpfNumberButton).scrollIntoView().click()
    cy.get(DEPOSIT_ADDITIONAL_INFORMATION.continueButton).click()
-   cy.get(DEPOSIT_ADDITIONAL_INFORMATION.pixDepositInstructions, { timeout: 30000 } ).should('be.visible')
+   cy.get(DEPOSIT_ADDITIONAL_INFORMATION.pixDepositInstructions, { timeout: 30000 } ).should('have.text', 'Aguardando conclusão do depósito')
 
 })
 Cypress.Commands.add('playerLogOff', () => {
